@@ -1,20 +1,14 @@
 <?php
-$rate = '';
-$points = 0;
+function rating(string $points)
+{
+    $rate = '';
+    for ($i = 1; $i < $points; $i++) {
+        $rate .= '⭐️';
+    }
 
-for ($i = 0; $i < 3; $i++) {
-    $points += $_POST['step' . $i];
+    for ($i = $points + 1; $i < 5; $i++) {
+        $rate .= '⚫️';
+    }
+    return $rate;
+    echo rating($_POST['question1'] + $_POST['question2'] + $_POST['question3']);
 }
-
-for ($i = 0; $i < $points; $i++) {
-    $rate .= '⭐️';
-}
-
-$i = $points === "-1" ? 0 : $points;
-
-while ($i < 5) {
-    $rate .= '⚫️';
-    $i++;
-}
-
-echo " Vous avez accordé la note de : $rate";
