@@ -5,13 +5,14 @@
             require 'form.php';
         } else {
             $error = checkForm($_POST);
+
+            if ($error !== []) {
+                require 'form.php';
+            } else {
+                require 'validation_form.php';
+            }
         }
 
-        if ($error !== []) {
-            require 'form.php';
-        } else {
-            require 'validation_form.php';
-        }
 
         function checkForm(array $post)
         {
