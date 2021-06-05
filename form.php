@@ -48,59 +48,59 @@
                 <legend class="mt-4">L'agent a-t-il été agréable ?</legend>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="question1" id="optionsRadios1" value="2" required=""> <!-- adds 2 points to the rating-->
+                        <input type="radio" class="form-check-input" name="question1" id="optionsRadios1" value="2" required="" <?= isset($_POST['question1']) && $_POST['question1'] === '2' ? 'checked' : "" ?>> <!-- adds 2 points to the rating-->
                         Oui
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="question1" id="optionsRadios2" value="0" required=""> <!-- adds  no point to the rating-->
+                        <input type="radio" class="form-check-input" name="question1" id="optionsRadios2" value="0" required="" <?= isset($_POST['question1']) && $_POST['question1'] === '0' ? 'checked' : "" ?>> <!-- adds  no point to the rating-->
                         non </label>
                 </div>
                 <div class="form-check-label">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="question1" id="optionsRadios3" value="1" required=""> <!-- adds 1point to the rating-->
+                        <input type="radio" class="form-check-input" name="question1" id="optionsRadios3" value="1" required="" <?= isset($_POST['question1']) && $_POST['question1'] === '1' ? 'checked' : "" ?>> <!-- adds 1point to the rating-->
                         sans avis
                     </label>
                 </div>
                 <legend class="mt-4">L'agent a-t-il compris votre problème</legend>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="question2" id="optionsRadios1" value="2" required=""> <!-- adds 2 points to the rating-->
+                        <input type="radio" class="form-check-input" name="question2" id="optionsRadios1" value="2" required="" <?= isset($_POST['question2']) && $_POST['question2'] === '2' ? 'checked' : "" ?>> <!-- adds 2 points to the rating-->
                         Oui
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="question2" id="optionsRadios2" value="0" required=""> <!-- adds  no point to the rating-->
+                        <input type="radio" class="form-check-input" name="question2" id="optionsRadios2" value="0" required="" <?= isset($_POST['question2']) && $_POST['question2'] === '0' ? 'checked' : "" ?>> <!-- adds  no point to the rating-->
                         non </label>
                 </div>
                 <div class="form-check-label">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="question2" id="optionsRadios3" value="1" required=""><!-- adds 1point to the rating-->
+                        <input type="radio" class="form-check-input" name="question2" id="optionsRadios3" value="1" required="" <?= isset($_POST['question2']) && $_POST['question2'] === '1' ? 'checked' : "" ?>><!-- adds 1point to the rating-->
                         sans avis
                     </label>
                 </div>
                 <legend class="mt-4">L'agent a-t-il résolu votre problème ?</legend>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="question3" id="optionsRadios1" value="1" required=""> <!-- adds 1point to the rating-->
+                        <input type="radio" class="form-check-input" name="question3" id="optionsRadios1" value="1" required="" <?= isset($_POST['question3']) && $_POST['question3'] === '1' ? 'checked' : "" ?>> <!-- adds 1point to the rating-->
                         Oui
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="question3" id="optionsRadios2" value="-1" required=""> <!-- adds  no point to the rating-->
+                        <input type="radio" class="form-check-input" name="question3" id="optionsRadios2" value="-1" required="" <?= isset($_POST['question3']) && $_POST['question3'] === '-1' ? 'checked' : "" ?>> <!-- adds  no point to the rating-->
                         non </label>
                 </div>
 
                 <div class="form-group">
                     <label for="message" class="form-label mt-4">Dites-nous en plus : </label>
-                    <textarea name="message" class="form-control" id="message" rows="3"></textarea>
+                    <textarea name="message" class="form-control" id="message" rows="3"><?= isset($_POST['mesage']) ? $_POST['message'] : "" ?></textarea>
                 </div>
                 <legend class="mt-4">Checkboxes</legend>
                 <div class="form-check">
-                    <input name="recall" class="form-check-input" type="checkbox" value="true" id="recall">
+                    <input name="recall" class="form-check-input" type="checkbox" value="true" id="recall" <?= isset($_POST['recall']) ? 'checked' : "" ?>>
                     <label class="form-check-label" for="recall">
                         Cochez-cette case si vous acceptez d'être rappelé.
                     </label>
