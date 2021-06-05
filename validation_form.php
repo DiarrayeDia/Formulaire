@@ -10,5 +10,5 @@ function rating(string $points)
         $rate .= '⚫️';
     }
     return $rate;
-    echo " Vous avez accordé la note de : $rate";
+    echo rating($_POST['question1'] + $_POST['question2'] + $_POST['question3']);
 }

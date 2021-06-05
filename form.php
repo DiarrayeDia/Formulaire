@@ -35,7 +35,7 @@
 
                 <div class="form-group">
                     <label for="phone" class="form-label mt-4">Numéro de téléphone : </label>
-                    <input type="tel" name="phone" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="0123456789" value="<?= isset($_POST['phone']) ? $_POST['phone'] : '' ?>" required="">
+                    <input type="tel" name="phone" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="0123456789" value="<?= isset($_POST['phone']) ? $_POST['phone'] : '' ?>" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" required="">
                     <small class="form-text text-muted"><?php if (isset($error['phone'])) echo $error['phone'] ?></small>
                 </div>
 
